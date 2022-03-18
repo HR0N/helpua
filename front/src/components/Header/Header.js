@@ -9,7 +9,6 @@ class Header extends Component{
 
     state = {
         locale: strings.getLanguage(), // default language ("ua") was set in App.js
-        fuck_u_git: true,
     };
 
     toggle_language(cur_lan){
@@ -34,8 +33,21 @@ class Header extends Component{
                 <nav>
                     <ul>
                         <li><NavLink to={"/"} >{strings.main}</NavLink></li>
-                        <li><NavLink to={"/i_need_help"} >{strings.i_need_help}</NavLink></li>
-                        <li><NavLink to={"/i_can_help"} >{strings.i_can_help}</NavLink></li>
+                        <li><NavLink to={"/i_need_help"} >{strings.i_need_help}</NavLink>
+                            <ul className={"dropdown_menu"}>
+                                <li><NavLink to={"/i_need_help/food"} >{strings.i_need_help_food}</NavLink></li>
+                                <li><NavLink to={"/i_need_help/medicine"} >{strings.i_need_help_medicine}</NavLink></li>
+                                <li><NavLink to={"/i_need_help/other"} >{strings.i_need_help_other}</NavLink></li>
+                            </ul>
+                        </li>
+                        <li><NavLink to={"/i_can_help"} >{strings.i_can_help}</NavLink>
+                            <ul className={"dropdown_menu"}>
+                                <li><NavLink to={"/i_can_help/food"} >{strings.i_can_help_food}</NavLink></li>
+                                <li><NavLink to={"/i_can_help/medicine"} >{strings.i_can_help_medicine}</NavLink></li>
+                                <li><NavLink to={"/i_can_help/medicine"} >{strings.i_can_help_driver}</NavLink></li>
+                                <li><NavLink to={"/i_can_help/other"} >{strings.i_can_help_other}</NavLink></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>

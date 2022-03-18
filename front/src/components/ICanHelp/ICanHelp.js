@@ -1,6 +1,6 @@
 import './ICanHelp.scss';
 import {connect} from "react-redux";
-import {Component} from "react";
+import React, {Component} from "react";
 
 class ICanHelp extends Component{
 

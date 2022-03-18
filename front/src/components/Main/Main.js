@@ -3,8 +3,10 @@ import {connect} from "react-redux";
 import React, {Component} from "react";
 import {Routes, Route} from 'react-router-dom';
 import Welcome from "../Welcome/Welcome";
-import INeedHelp from "../INeedHelp/INeedHelp";
-import ICanHelp from "../ICanHelp/ICanHelp";
+// import INeedHelp from "../INeedHelp/INeedHelp";
+// import ICanHelp from "../ICanHelp/ICanHelp";
+import CanHelpFood from "../ICanHelp/CanHelpFood";
+import NeedHelpFood from "../INeedHelp/NeedHelpFood";
 
 class Main extends Component{
 
@@ -13,8 +15,9 @@ class Main extends Component{
             <div className={'Main'}>
                 <Routes>
                     <Route exact path={'/'} element={<Welcome/>}/>
-                    <Route exact path={'/i_need_help'} element={<INeedHelp/>}/>
-                    <Route exact path={'/i_can_help'} element={<ICanHelp/>}/>
+                    <Route exact path={'/i_need_help/food'} element={<NeedHelpFood/>}/>
+                    {/*<Route exact path={'/i_need_help'} element={<INeedHelp/>}/>
+                    <Route exact path={'/i_can_help'} element={<ICanHelp/>}/>*/}
                 </Routes>
             </div>
         );

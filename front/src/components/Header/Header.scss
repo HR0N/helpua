@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  position: sticky;
+  //position: sticky;
   top: 0;
   margin: 0;
   padding: 0;
@@ -45,6 +45,40 @@
         position: relative;
         color: white;
         margin: 0 5px;
+        .dropdown_menu{
+          position: absolute;
+          width: 100%;
+          display: none;
+          flex-wrap: wrap;
+          background-color: rgba(44,62,78,.9);
+          border-radius: 0 0 .25rem .25rem;
+          padding-bottom: 5px;
+          li{
+            position: relative;
+            width: 100%;
+            margin: 8px 0 0 0;
+            a{
+              display: block;
+              box-sizing: border-box;
+              text-align: left;
+              cursor: pointer;
+              transition: linear all .2s;
+              &:hover{
+                text-indent: 5px;
+                background-color: rgba(255, 255, 255, 0.05);
+              }
+            }
+            a:before{
+              width: 0;
+            }
+            &:hover a:before{
+              width: 100%;
+            }
+          }
+        }
+        &:hover .dropdown_menu{
+          display: flex;
+        }
         &:hover a:before{
           width: 100%;
         }

@@ -1,5 +1,8 @@
 .Main {
-  width: 100%;
+  min-width: 300px;
+  width: calc(100vw - 20%);
   flex-grow: 1;
   box-sizing: border-box;
+  margin: 50px auto;
+  color: whitesmoke;
 }
