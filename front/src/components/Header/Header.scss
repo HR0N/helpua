@@ -1,0 +1,99 @@
+/*    Gradients:     https://cssgradient.io/gradient-backgrounds/    */
+.Header{
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  //background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+  background-size: cover;
+  .caption{
+    z-index: 2;
+    //background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+    //background-image: linear-gradient( 268deg,  rgba(255,105,180,1) 4.1%, rgba(255,174,215,1) 74.3% );
+    background-image: linear-gradient( 109.6deg,  rgba(255,115,68,1) 11.2%, rgba(244,255,32,1) 100.6% );
+    //background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(253,203,50,1) 0%, rgba(244,56,98,1) 100.2% );
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: calc(50px + 15vw);
+    width: 100%;
+    white-space: nowrap;
+    background-clip: text;
+    font-weight: bold;
+    font-size: calc(1em + 5vw);
+    color: transparent;
+    font-family: "Arial Black", serif;
+    overflow: hidden;
+    transition: linear all .5s;
+  }
+  nav{
+    width: 100%;
+    font-size: 1.1em;
+    padding: 6px 3px;
+    ul{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      li{
+        position: relative;
+        color: white;
+        margin: 0 5px;
+        &:hover a:before{
+          width: 100%;
+        }
+        a{
+          color: ghostwhite;
+          cursor: pointer;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding: 5px 5px;
+          text-decoration: none;
+          text-align: center;
+          &:before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background-color: white;
+            left: 0;
+            bottom: 0;
+            box-shadow: 1px 1px 2px white;
+            overflow: hidden;
+            transition: linear all .2s;
+          }
+        }
+      }
+    }
+  }
+  .language{
+    top: 7px;
+    right: 7px;
+    font-weight: 500;
+    font-size: 12px;
+    position: fixed;
+    color: rgba(248, 248, 255, 0.51);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: linear all .5s;
+    user-select: none;
+    &:hover{
+      color: ghostwhite;
+    }
+    &:active{
+      text-shadow: 1px 1px 2px black;
+    }
+  }
+}
+
+.active{
+  &:before{
+  width: 100% !important;
+}}

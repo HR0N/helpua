@@ -1,0 +1,29 @@
+@import "variables";
+@media screen and (max-width: 768px) {
+  .Header{
+    .caption{
+      height: calc(50px + 10vw) !important;
+      font-size: calc(1em + 5vw);
+    }
+    nav{
+      ul{
+        flex-wrap: wrap;
+        li{
+          width: 100%;
+          margin: 5px !important;
+          }
+          a{
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 425px) {
+  .Header{
+    .caption{
+      height: calc(50px + 15vw) !important;
+      font-size: calc(1em + 5vw);
+    }}
+
+}
