@@ -1,6 +1,7 @@
 import './Welcome.scss';
 import {connect} from "react-redux";
-import {Component} from "react";
+import React, {Component} from "react";
+import strings from "../../services/localization";
 /*import Weather from "../Weather/Weather";*/
 
 class Welcome extends Component{
@@ -17,7 +18,7 @@ class Welcome extends Component{
     render() {
         return (
             <div className={'Welcome'}>
-                {/*<Weather/>*/}
+                <h2>{strings.what_u_need}<br/>{strings.what_u_need2}</h2>
             </div>
         );
     }
