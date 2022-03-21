@@ -15,7 +15,7 @@ class NeedForHelpOther extends Component{
                         <input className={"form-control "} type="number" />
                     </label>
                     <label>
-                        {strings.i_need_help_food_placeholder2}
+                        {strings.i_need_help_food_placeholder2} <br/> <em>{strings.if_cant_type_address}</em>
                         <input className={"form-control "} type="text" />
                     </label>
                     <label>

@@ -12,12 +12,14 @@ import NeedForHelpOther from "../INeedHelp/NeedForHelpOther";
 import CanHelpMedicine from "../ICanHelp/CanHelpMedicine";
 import CanHelpDriver from "../ICanHelp/CanHelpDriver";
 import CanHelpOther from "../ICanHelp/CanHelpOther";
+import strings from "../../services/localization";
 
 class Main extends Component{
 
     render() {
         return (
             <div className={'Main'}>
+                <h2>{strings.what_u_need}</h2>
                 <Routes>
                     <Route exact path={'/'} element={<Welcome/>}/>
                     <Route exact path={'/i_need_help/food'} element={<NeedHelpFood/>}/>
@@ -38,8 +40,9 @@ class Main extends Component{
 
 
 
-function mapStateToProps() {
+function mapStateToProps(state) {
     return {
+        refresh: state.app.refresh_all,
     };
 }
 function mapDispatchToProps() {
