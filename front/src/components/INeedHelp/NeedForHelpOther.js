@@ -1,14 +1,14 @@
-import './NeedHelpFood.scss';
+import './NeedForHelpOther.scss';
 import {connect} from "react-redux";
 import {Component} from "react";
 import strings from "../../services/localization";
 
-class NeedHelpFood extends Component{
+class NeedForHelpOther extends Component{
 
     render() {
         return (
-            <div className={'NeedHelpFood'}>
-                <h2>{strings.i_need_help_h2_food}</h2>
+            <div className={'NeedForHelpOther'}>
+                <h2>{strings.i_need_help_h2_other}</h2>
                 <form className={"form-group"}>
                     <label>
                         {strings.i_need_help_food_placeholder1}
@@ -27,11 +27,7 @@ class NeedHelpFood extends Component{
                         <input className={"form-control "} type="tel" />
                     </label>
                     <label>
-                        {strings.i_need_help_food_placeholder4} -
-                        <input className={" checkbox"} type="checkbox" />
-                    </label>
-                    <label>
-                        {strings.i_need_help_food_placeholder6}
+                        {strings.i_need_help_other_placeholder1}
                         <textarea className={"form-control"} rows={4}/>
                     </label>
                     <div className="buttons">
@@ -55,4 +51,4 @@ function mapDispatchToProps() {
     return {
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(NeedHelpFood);
+export default connect(mapStateToProps, mapDispatchToProps)(NeedForHelpOther);

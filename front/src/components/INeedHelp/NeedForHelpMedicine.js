@@ -1,14 +1,14 @@
-import './NeedHelpFood.scss';
+import './NeedForHelpMedicine.scss';
 import {connect} from "react-redux";
 import {Component} from "react";
 import strings from "../../services/localization";
 
-class NeedHelpFood extends Component{
+class NeedForHelpMedicine extends Component{
 
     render() {
         return (
-            <div className={'NeedHelpFood'}>
-                <h2>{strings.i_need_help_h2_food}</h2>
+            <div className={'NeedForHelpMedicine'}>
+                <h2>{strings.i_need_help_h2_medicine}</h2>
                 <form className={"form-group"}>
                     <label>
                         {strings.i_need_help_food_placeholder1}
@@ -27,8 +27,9 @@ class NeedHelpFood extends Component{
                         <input className={"form-control "} type="tel" />
                     </label>
                     <label>
-                        {strings.i_need_help_food_placeholder4} -
-                        <input className={" checkbox"} type="checkbox" />
+                        {strings.i_need_help_medicine_placeholder1}<br/>
+                        {strings.main_yes}<input className={" checkbox"} name={"recipe"} type="radio" /><br/>
+                        {strings.main_no}<input className={" checkbox"} name={"recipe"} type="radio" />
                     </label>
                     <label>
                         {strings.i_need_help_food_placeholder6}
@@ -55,4 +56,4 @@ function mapDispatchToProps() {
     return {
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(NeedHelpFood);
+export default connect(mapStateToProps, mapDispatchToProps)(NeedForHelpMedicine);

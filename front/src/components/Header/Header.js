@@ -44,7 +44,7 @@ class Header extends Component{
                             <ul className={"dropdown_menu"}>
                                 <li><NavLink to={"/i_can_help/food"} >{strings.i_can_help_food}</NavLink></li>
                                 <li><NavLink to={"/i_can_help/medicine"} >{strings.i_can_help_medicine}</NavLink></li>
-                                <li><NavLink to={"/i_can_help/medicine"} >{strings.i_can_help_driver}</NavLink></li>
+                                <li><NavLink to={"/i_can_help/driver"} >{strings.i_can_help_driver}</NavLink></li>
                                 <li><NavLink to={"/i_can_help/other"} >{strings.i_can_help_other}</NavLink></li>
                             </ul>
                         </li>

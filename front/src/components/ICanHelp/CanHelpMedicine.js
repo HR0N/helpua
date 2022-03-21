@@ -1,23 +1,15 @@
-import './NeedHelpFood.scss';
+import './CanHelpMedicine.scss';
 import {connect} from "react-redux";
 import {Component} from "react";
 import strings from "../../services/localization";
 
-class NeedHelpFood extends Component{
+class CanHelpMedicine extends Component{
 
     render() {
         return (
-            <div className={'NeedHelpFood'}>
-                <h2>{strings.i_need_help_h2_food}</h2>
+            <div className={'CanHelpMedicine'}>
+                <h2>{strings.i_can_help_h2_medicine}</h2>
                 <form className={"form-group"}>
-                    <label>
-                        {strings.i_need_help_food_placeholder1}
-                        <input className={"form-control "} type="number" />
-                    </label>
-                    <label>
-                        {strings.i_need_help_food_placeholder2}
-                        <input className={"form-control "} type="text" />
-                    </label>
                     <label>
                         {strings.i_need_help_food_placeholder5}
                         <input className={"form-control"} type="text" />
@@ -27,12 +19,16 @@ class NeedHelpFood extends Component{
                         <input className={"form-control "} type="tel" />
                     </label>
                     <label>
-                        {strings.i_need_help_food_placeholder4} -
-                        <input className={" checkbox"} type="checkbox" />
+                        {strings.i_can_help_medicine_placeholder1}
+                        <textarea className={"form-control"} rows={4}/>
                     </label>
                     <label>
-                        {strings.i_need_help_food_placeholder6}
-                        <textarea className={"form-control"} rows={4}/>
+                        {strings.i_can_help_food_placeholder2}
+                        <input className={"form-control "} type="text" />
+                    </label>
+                    <label>
+                        {strings.i_can_help_food_placeholder3}<br/>
+                        {strings.main_yes}<input className={" checkbox"} type="checkbox" /><br/>
                     </label>
                     <div className="buttons">
                         <div className="btn btn-outline-warning">{strings.i_need_help_submit}</div>
@@ -55,4 +51,4 @@ function mapDispatchToProps() {
     return {
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(NeedHelpFood);
+export default connect(mapStateToProps, mapDispatchToProps)(CanHelpMedicine);
