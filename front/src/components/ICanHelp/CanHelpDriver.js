@@ -30,10 +30,10 @@ class CanHelpDriver extends Component{
                         {strings.i_can_help_driver_placeholder3}
                         <input className={"form-control "} type="text" />
                     </label>
-                    <label>
+                    {/*<label>
                         {strings.i_can_help_driver_placeholder4}
                         <input className={"form-control "} type="text" />
-                    </label>
+                    </label>*/}
                     <label>
                         {strings.i_can_help_driver_placeholder1}
                         <textarea className={"form-control"} rows={4}/>
