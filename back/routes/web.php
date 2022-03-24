@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EXAMPLEController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +14,7 @@ use App\Http\Controllers\EXAMPLEController;
 */
 
 Route::get('/', function () {return view('welcome');});
-Route::get('/aa', [EXAMPLEController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

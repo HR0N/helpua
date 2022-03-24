@@ -13,7 +13,8 @@ class EXAMPLEController extends Controller
      */
     public function index()
     {
-        dd('One side API React + Laravel = Test 0.1');
+//        dd('One side API React + Laravel = Test 0.1');
+        return 'One side API React + Laravel / Test 0.2 = unsuccessful';
     }
 
     /**

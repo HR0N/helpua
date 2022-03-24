@@ -2,7 +2,7 @@ import './Welcome.scss';
 import {connect} from "react-redux";
 import React, {Component} from "react";
 import strings from "../../services/localization";
-import axios from "axios";
+import apiClient from "../../services/api";
 /*import Weather from "../Weather/Weather";*/
 
 class Welcome extends Component{
@@ -12,8 +12,9 @@ class Welcome extends Component{
     };
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/aa')
-            .then(res => {console.log(res);})
+        apiClient
+            .get("api/aa")
+            .then(res => {console.log(res);});
     }
 
 
